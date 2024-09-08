@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.relevant.RelevantVacanciesFragment">
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="8dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/text_field"
+                android:padding="8dp">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/button_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:paddingHorizontal="0dp"
+                    android:src="@drawable/icon_left_arrow"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="match_parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/search_field"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/relevant_vacancies"
+                    android:textColor="@color/grey4"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/filter_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/filter_button"
+                android:contentDescription="@string/filters_button_desc" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/vacancies_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Text1"
+                android:layout_weight="1"
+                android:layout_gravity="start|center_vertical"
+                android:lineHeight="24sp"
+                android:textColor="@color/white"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/vacancies_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Text1"
+                android:layout_gravity="end|center_vertical"
+                android:text="@string/relevant"
+                android:paddingHorizontal="8dp"
+                android:lineHeight="24sp"
+                android:textColor="@color/blue"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_sort"
+                android:layout_gravity="center_vertical"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/relevant_vacancies_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+
+        <ProgressBar
+            android:id="@+id/vacancies_loading_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8dp"
+            android:visibility="gone"
+            />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">JobHunter</string>
+    <string name="title_search">Поиск</string>
+    <string name="title_favourites">Избранное</string>
+    <string name="title_responses">Отклики</string>
+    <string name="title_messages">Сообщения</string>
+    <string name="title_profile">Профиль</string>
+    <string name="filters_button_desc">Search filters</string>
+    <string name="search_icon_desc">search icon</string>
+    <string name="search_field_text">Должность, ключевые слова</string>
+    <string name="relevant_vacancies">Должность по подходящим вакансиям</string>
+    <string name="vacancies_for_you">Вакансии для вас</string>
+    <string name="is_favourite_vacancy_desc">is favourite vacancy</string>
+    <string name="respond">Откликнуться</string>
+    <string name="published_date">Опубликовано %s</string>
+    <string name="vacancy_title">Вакансия</string>
+    <string name="relevant">По соответствию</string>
+    <string name="visible_vacancy">Показать / скрыть вакансию</string>
+    <string name="share_vacancy">Поделиться вакансией</string>
+    <string name="like_vacancy">Лайкнуть вакансию</string>
+    <string name="experience">Требуемый опыт: %s</string>
+    <string name="your_responsibilities">Ваши задачи</string>
+    <string name="ask_employer">Задайте вопрос работодателю</string>
+    <string name="ask_employer_desc">Он получит его с откликом на вакансию</string>
+    <string name="resume_for_respond">Резюме для отклика</string>
+    <string name="vacancy_designer">UI/UX дизайнер</string>
+    <string name="add_cover_letter">Добавить сопроводительное</string>
+    <string name="your_cover_letter">Ваше сопроводительное письмо</string>
+
+    <plurals name="more_vacancies">
+        <item quantity="zero">Ещё %d вакансий</item>
+        <item quantity="one">Ещё %f вакансия</item>
+        <item quantity="few">Ещё %d вакансии</item>
+        <item quantity="many">Ещё %d вакансий</item>
+    </plurals>
+    <plurals name="looking_number_1">
+        <item quantity="zero">Сейчас просматривает %d человек</item>
+        <item quantity="one">Сейчас просматривает %d человек</item>
+        <item quantity="few">Сейчас просматривают %d человека</item>
+        <item quantity="many">Сейчас просматривают %d человек</item>
+    </plurals>
+    <plurals name="looking_number_2">
+        <item quantity="one">%d человек сейчас смотрит</item>
+        <item quantity="few">%d человека сейчас смотрят</item>
+        <item quantity="many">%d человек сейчас смотрят</item>
+    </plurals>
+    <plurals name="vacancies_count">
+        <item quantity="zero">%d вакансий</item>
+        <item quantity="one">%d вакансия</item>
+        <item quantity="two">%d вакансии</item>
+        <item quantity="few">%d вакансии</item>
+        <item quantity="many">%d вакансий</item>
+    </plurals>
+    <plurals name="applied_number">
+        <item quantity="one">%d человек уже откликнулся</item>
+        <item quantity="few">%d человека уже откликнулись</item>
+        <item quantity="many">%d человек уже откликнулись</item>
+    </plurals>
+</resources>

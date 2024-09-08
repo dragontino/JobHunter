@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="132dp"
+    android:layout_height="120dp"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/offer_item_bg">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_view"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:backgroundTint="@android:color/transparent"
+        android:importantForAccessibility="no" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Text1"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:lineHeight="17sp"
+        android:textColor="@color/white"
+        android:maxLines="2"
+        android:backgroundTint="@android:color/transparent"
+    />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Text1"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:lineHeight="17sp"
+        android:textColor="@color/green"
+        android:backgroundTint="@android:color/transparent" />
+</androidx.appcompat.widget.LinearLayoutCompat>

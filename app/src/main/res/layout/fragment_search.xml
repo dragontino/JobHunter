@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.search.SearchFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="8dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/search_field"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textAppearance="@style/Text1"
+                android:layout_weight="1"
+                android:text="@string/search_field_text"
+                android:textColor="@color/grey4"
+                android:background="@drawable/text_field"
+                android:gravity="center_vertical"
+                app:drawableStartCompat="@drawable/icon_search"
+                android:padding="8dp"
+                android:drawablePadding="8dp"/>
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/filter_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/filter_button"
+                android:contentDescription="@string/filters_button_desc" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/offers_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <ProgressBar
+            android:id="@+id/offers_loading_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:paddingVertical="8dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/vacancies_for_you"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Title2"
+            app:fontFamily="@font/sf_pro_display_semibold"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:textAlignment="gravity"
+            android:text="@string/vacancies_for_you"
+            android:lineHeight="24sp"
+            android:textColor="@color/white"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vacancies_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+
+        <ProgressBar
+            android:id="@+id/vacancies_loading_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:paddingVertical="8dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/more_vacancies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/blue_button_small_corners_bg"
+            android:elevation="4dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:maxWidth="320dp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textAppearance="@style/Button2"
+            android:textColor="@color/white"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

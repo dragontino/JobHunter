@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/blue_button_small_corners_bg"
+    android:elevation="4dp"
+    android:minWidth="330dp"
+    android:minHeight="48dp"
+    android:textAlignment="center"
+    android:textAllCaps="false"
+    android:textAppearance="@style/Button2"
+    android:fontFamily="@font/sf_pro_display_regular"
+    android:textColor="@color/white"
+    tools:ignore="SpeakableTextPresentCheck,VisualLintButtonSize" />

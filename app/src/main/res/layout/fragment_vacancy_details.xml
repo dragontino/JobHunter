@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/vacancy_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MaterialToolbar"
+        app:menu="@menu/vacancy_detail_menu"
+        app:navigationIcon="@drawable/icon_left_arrow"
+        android:translationZ="2dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginBottom="32dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/vacancy_title"
+                style="@style/Title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fontFamily="@font/sf_pro_display_semibold"
+                android:gravity="start"
+                android:lineHeight="26dp"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/salary"
+                style="@style/Text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fontFamily="@font/sf_pro_display_regular"
+                android:gravity="start"
+                android:lineHeight="17sp"
+                android:layout_marginTop="16dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/experience"
+                style="@style/Text1"
+                app:fontFamily="@font/sf_pro_display_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginTop="16dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/schedules"
+                style="@style/Text1"
+                app:fontFamily="@font/sf_pro_display_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="start" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/applied_number"
+                    layout="@layout/vacancy_looking_number"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <Space
+                    android:id="@+id/numbers_spacer"
+                    android:layout_width="8dp"
+                    android:layout_height="match_parent" />
+
+                <include
+                    android:id="@+id/looking_number"
+                    layout="@layout/vacancy_looking_number"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="24dp"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/company_name_bg">
+
+                <include
+                    android:id="@+id/company_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    layout="@layout/company_title_layout" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_marginVertical="8dp"
+                    app:srcCompat="@drawable/image_map"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/company_address"
+                    style="@style/Text1"
+                    app:fontFamily="@font/sf_pro_display_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/company_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:lineHeight="17sp"
+                app:fontFamily="@font/sf_pro_display_regular"
+                android:gravity="start"
+                style="@style/Text1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Title2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                app:fontFamily="@font/sf_pro_display_regular"
+                android:layout_marginTop="16dp"
+                android:text="@string/your_responsibilities"
+                android:textColor="@color/white"
+                android:lineHeight="24sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/responsibilities"
+                style="@style/Text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                app:fontFamily="@font/sf_pro_display_regular"
+                android:textColor="@color/white"
+                android:lineHeight="24sp"
+                android:layout_marginTop="8dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                app:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/ask_employer"
+                android:textColor="@color/white"
+                android:lineHeight="24sp"
+                android:layout_marginTop="32dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                app:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/ask_employer_desc"
+                android:textColor="@color/grey3"
+                android:lineHeight="24sp"
+                android:layout_marginTop="8dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/questions_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/respond_button"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:maxWidth="320dp"
+                android:background="@drawable/green_button_small_corners_bg"
+                android:textAppearance="@style/Button2"
+                android:textColor="@color/white"
+                android:text="@string/respond"
+                />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="16dp"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/data_loading_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
