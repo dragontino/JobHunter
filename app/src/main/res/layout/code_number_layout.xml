@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatEditText xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/number_edit_text_bg"
+    android:fontFamily="@font/sf_pro_display_semibold"
+    android:focusable="true"
+    android:gravity="center"
+    android:inputType="number"
+    android:lineHeight="31sp"
+    android:maxEms="1"
+    android:textColor="@color/white"
+    android:textColorHint="@color/grey3"
+    android:textSize="24sp"
+    tools:ignore="SpeakableTextPresentCheck" />

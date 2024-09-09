@@ -125,7 +125,7 @@
         android:layout_width="match_parent"
         android:layout_height="32dp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/green_button_large_corners_bg"
+        android:background="@drawable/green_button_16dp_corners_bg"
         android:gravity="center"
         android:lineHeight="18sp"
         android:text="@string/respond"

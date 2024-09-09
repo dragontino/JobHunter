@@ -26,6 +26,19 @@
     <string name="vacancy_designer">UI/UX дизайнер</string>
     <string name="add_cover_letter">Добавить сопроводительное</string>
     <string name="your_cover_letter">Ваше сопроводительное письмо</string>
+    <string name="job_hunting">Поиск работы</string>
+    <string name="email_hint">Электронная почта или телефон</string>
+    <string name="enter_with_password">Войти с паролем</string>
+    <string name="proceed">Продолжить</string>
+    <string name="employees_search">Поиск сотрудников</string>
+    <string name="employees_search_text">Я ищу сотрудников</string>
+    <string name="employees_search_desc">Размещение вакансий и доступ к базе резюме</string>
+    <string name="entry_title">Вход в личный кабинет</string>
+    <string name="invalid_email_exception">Вы ввели неверный e-mail</string>
+    <string name="code">Код</string>
+    <string name="send_code_to_email">Отправили код на %s</string>
+    <string name="send_code_to_email_desc">Напишите его, чтобы подтвердить, что это вы, а не кто-то другой входит в личный кабинет</string>
+    <string name="submit">Подтвердить</string>
 
     <plurals name="more_vacancies">
         <item quantity="zero">Ещё %d вакансий</item>

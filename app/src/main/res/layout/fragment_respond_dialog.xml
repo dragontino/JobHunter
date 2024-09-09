@@ -48,7 +48,7 @@
         android:id="@+id/respond_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/green_button_small_corners_bg"
+        android:background="@drawable/green_button_7dp_corners_with_border_bg"
         android:textAppearance="@style/Button1"
         android:textColor="@color/white"
         android:text="@string/respond"

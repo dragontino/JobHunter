@@ -3,7 +3,50 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/fragment_search">
+    app:startDestination="@id/nav_entry">
+
+    <navigation
+        android:id="@+id/nav_entry"
+        app:startDestination="@id/fragment_entry_email"
+        >
+
+        <fragment
+            android:id="@+id/fragment_entry_email"
+            android:name="com.jobhunter.app.ui.entry.EntryEmailFragment"
+            android:label="@string/entry_title"
+            tools:layout="@layout/fragment_entry_email">
+            <action
+                android:id="@+id/send_entry_code_action"
+                app:destination="@id/fragment_entry_code"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:launchSingleTop="true"
+                app:popUpTo="@id/fragment_entry_email" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/fragment_entry_code"
+            android:label="@string/code"
+            android:name="com.jobhunter.app.ui.entry.EntryCodeFragment"
+            tools:layout="@layout/fragment_entry_code"
+            >
+            <action
+                android:id="@+id/show_main_screen_action"
+                app:destination="@id/fragment_search"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popUpTo="@id/fragment_entry_email"
+                app:launchSingleTop="true"
+                app:popUpToInclusive="true"
+                />
+            <argument
+                android:name="email"
+                app:argType="string" />
+        </fragment>
+
+    </navigation>
+
 
     <fragment
         android:id="@+id/fragment_search"

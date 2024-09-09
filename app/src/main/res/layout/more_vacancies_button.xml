@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_centerHorizontal="true"
-    android:background="@drawable/blue_button_small_corners_bg"
+    android:background="@drawable/blue_button_7dp_corners_with_border_bg"
     android:elevation="4dp"
     android:minWidth="330dp"
     android:minHeight="48dp"

@@ -1,8 +1,12 @@
 package com.jobhunter.app.ui
 
+import android.view.View
+import android.view.inputmethod.EditorInfo
 import androidx.annotation.DrawableRes
+import androidx.core.widget.doAfterTextChanged
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 import com.jobhunter.app.R
+import com.jobhunter.app.databinding.CodeNumberLayoutBinding
 import com.jobhunter.app.databinding.OfferBinding
 import com.jobhunter.app.databinding.VacancyBinding
 import com.jobhunter.app.databinding.VacancyQuestionBinding
@@ -117,5 +121,31 @@ fun questionsDelegate(onClick: (String) -> Unit) =
                 onClick(item)
             }
             binding.root.text = item
+        }
+    }
+
+
+fun codeNumbersDelegate(onUpdateText: (String, Int) -> Unit) =
+    adapterDelegateViewBinding<String, String, CodeNumberLayoutBinding>(
+        viewBinding = { layoutInflater, parent ->
+            CodeNumberLayoutBinding.inflate(layoutInflater, parent, false)
+        }
+    ) {
+        binding.root.imeOptions = EditorInfo.IME_ACTION_NEXT
+
+        bind {
+            binding.root.setText(item)
+
+            binding.root.doAfterTextChanged { text ->
+                onUpdateText(text?.toString() ?: "", bindingAdapterPosition)
+                if (!text.isNullOrBlank()) {
+                    when (val nextView = binding.root.focusSearch(View.FOCUS_RIGHT)) {
+                        null -> binding.root.clearFocus()
+                        else -> nextView.requestFocus()
+                    }
+                    binding.root.focusable = View.NOT_FOCUSABLE
+                    binding.root.keyListener = null
+                }
+            }
         }
     }

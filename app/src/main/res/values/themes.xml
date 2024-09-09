@@ -40,6 +40,13 @@
     <style name="Title2">
         <item name="android:fontFamily">@font/sf_pro_display_semibold</item>
         <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+
+    <style name="Title3">
+        <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
     </style>
 
     <style name="Title4">

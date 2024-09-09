@@ -104,7 +104,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="16dp"
             android:layout_marginHorizontal="16dp"
-            android:background="@drawable/blue_button_small_corners_bg"
+            android:background="@drawable/blue_button_7dp_corners_with_border_bg"
             android:elevation="4dp"
             android:fontFamily="@font/sf_pro_display_regular"
             android:maxWidth="320dp"

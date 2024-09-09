@@ -198,7 +198,7 @@
                 android:layout_height="48dp"
                 android:layout_marginTop="16dp"
                 android:maxWidth="320dp"
-                android:background="@drawable/green_button_small_corners_bg"
+                android:background="@drawable/green_button_7dp_corners_with_border_bg"
                 android:textAppearance="@style/Button2"
                 android:textColor="@color/white"
                 android:text="@string/respond"
