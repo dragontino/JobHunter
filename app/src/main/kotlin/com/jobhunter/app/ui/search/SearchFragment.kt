@@ -148,6 +148,10 @@ class SearchFragment : Fragment() {
                 override fun likeVacancy(vacancy: Vacancy) {
                     viewModel.likeVacancy(vacancy)
                 }
+
+                override fun dislikeVacancy(vacancy: Vacancy) {
+                    viewModel.dislikeVacancy(vacancy)
+                }
             },
         )
         binding.vacanciesRecyclerView.adapter = vacanciesAdapter

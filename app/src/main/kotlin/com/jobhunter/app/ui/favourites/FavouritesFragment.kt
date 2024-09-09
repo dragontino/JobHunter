@@ -11,6 +11,8 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.jobhunter.app.R
 import com.jobhunter.app.app.App
@@ -18,6 +20,7 @@ import com.jobhunter.app.databinding.FragmentFavouritesBinding
 import com.jobhunter.app.ui.VacanciesAdapter
 import com.jobhunter.app.ui.VacanciesListener
 import com.jobhunter.app.utils.applyWindowInsets
+import com.jobhunter.app.utils.createSpacerDrawable
 import com.jobhunter.app.utils.hide
 import com.jobhunter.app.utils.show
 import com.jobhunter.domain.model.Vacancy
@@ -79,10 +82,19 @@ class FavouritesFragment : Fragment() {
                 override fun likeVacancy(vacancy: Vacancy) {
                     viewModel.likeVacancy(vacancy)
                 }
+
+                override fun dislikeVacancy(vacancy: Vacancy) {
+                    viewModel.dislikeVacancy(vacancy)
+                }
             }
         )
 
         binding.vacanciesRecyclerView.adapter = vacanciesAdapter
+
+        val itemDecoration = DividerItemDecoration(context, RecyclerView.VERTICAL).apply {
+            setDrawable(createSpacerDrawable(spaceDp = 16))
+        }
+        binding.vacanciesRecyclerView.addItemDecoration(itemDecoration)
 
         viewModel.vacancyLiveData.observe(viewLifecycleOwner) { vacancies ->
             vacanciesAdapter.vacancies = vacancies

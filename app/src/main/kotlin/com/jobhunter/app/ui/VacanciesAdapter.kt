@@ -10,7 +10,8 @@ internal class VacanciesAdapter(
     vacanciesDelegate(
         onClickToVacancy = vacanciesListener::openDetails,
         onClickToRespondButton = vacanciesListener::respond,
-        onLikeVacancy = vacanciesListener::likeVacancy
+        onLikeVacancy = vacanciesListener::likeVacancy,
+        onDislikeVacancy = vacanciesListener::dislikeVacancy
     ),
 ) {
     var vacancies: List<Vacancy>

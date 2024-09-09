@@ -11,7 +11,9 @@ interface JobsRepository {
 
     fun getLikedVacancies(): Flow<List<Vacancy>>
 
-    suspend fun likeVacancyById(vacancyId: String): Result<Unit>
+    suspend fun likeVacancy(vacancy: Vacancy): Result<Unit>
 
-    suspend fun getVacancyById(vacancyId: String): Result<Vacancy>
+    suspend fun dislikeVacancy(vacancy: Vacancy): Result<Unit>
+
+    fun getVacancyById(vacancyId: String): Flow<Vacancy>
 }

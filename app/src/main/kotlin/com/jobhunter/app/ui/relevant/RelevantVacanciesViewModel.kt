@@ -43,7 +43,18 @@ class RelevantVacanciesViewModel @Inject constructor(
 
     fun likeVacancy(vacancy: Vacancy) {
         viewModelScope.launch {
-            val result = likeVacancyUseCase.likeVacancyById(vacancyId = vacancy.id)
+            val result = likeVacancyUseCase.likeVacancy(vacancy)
+            result.onFailure { throwable ->
+                throwable.localizedMessage
+                    ?.takeIf { it.isNotBlank() }
+                    ?.let { _messageFlow.send(it) }
+            }
+        }
+    }
+
+    fun dislikeVacancy(vacancy: Vacancy) {
+        viewModelScope.launch {
+            val result = likeVacancyUseCase.dislikeVacancy(vacancy)
             result.onFailure { throwable ->
                 throwable.localizedMessage
                     ?.takeIf { it.isNotBlank() }

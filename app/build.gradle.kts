@@ -60,6 +60,8 @@ dependencies {
     implementation(libs.androidx.recyclerview)
     ksp(libs.dagger.compiler)
 
+    implementation(libs.room.runtime)
+
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
 

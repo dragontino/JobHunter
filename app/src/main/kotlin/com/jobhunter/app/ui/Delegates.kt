@@ -20,7 +20,8 @@ import java.time.format.DateTimeFormatter
 fun vacanciesDelegate(
     onClickToVacancy: (Vacancy) -> Unit,
     onClickToRespondButton: (Vacancy) -> Unit,
-    onLikeVacancy: (Vacancy) -> Unit
+    onLikeVacancy: (Vacancy) -> Unit,
+    onDislikeVacancy: (Vacancy) -> Unit
 ) =
     adapterDelegateViewBinding<Vacancy, Vacancy, VacancyBinding>(
         viewBinding = { layoutInflater, parent ->
@@ -36,7 +37,7 @@ fun vacanciesDelegate(
                 onClickToRespondButton(item)
             }
             binding.isFavourite.setOnClickListener {
-                onLikeVacancy(item)
+                if (item.isFavorite) onDislikeVacancy(item) else onLikeVacancy(item)
             }
 
             with(binding.isFavourite) {
@@ -135,6 +136,10 @@ fun codeNumbersDelegate(onUpdateText: (String, Int) -> Unit) =
 
         bind {
             binding.root.setText(item)
+
+            if (bindingAdapterPosition == 0) {
+                binding.root.requestFocus()
+            }
 
             binding.root.doAfterTextChanged { text ->
                 onUpdateText(text?.toString() ?: "", bindingAdapterPosition)
